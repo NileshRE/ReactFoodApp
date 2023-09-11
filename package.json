@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Namaste React with Node JS",
   "scripts": {
-    "start": "parcel src/INDEX1.html",
-    "build": "parcel build INDEX1.html",
+    "start": "parcel src/index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {

@@ -1,0 +1,25 @@
+{
+  "name": "node_test",
+  "version": "1.0.0",
+  "description": "Namaste React with Node JS",
+  "scripts": {
+    "start": "parcel src/INDEX1.html",
+    "build": "parcel build INDEX1.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NileshRE/ReactFoodApp.git"
+  },
+  "author": "Nilesh Kumar",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.9.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

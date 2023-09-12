@@ -3,6 +3,7 @@ import ResCard from "./ResCard";
 import {Top} from "../Utils/constant";
 import { useEffect, useState } from "react";
 import Shimmer from "./shimmer";
+import { Link } from "react-router-dom";
 
 
 
@@ -38,6 +39,7 @@ const Body =() => {
         <Shimmer/>
     ) : (
         <div id ="main">
+        <h4> What would you like to have!!</h4>
         <div className ="top_Items">
             {Top.map((restaurant) => (
                 <Item Top={restaurant} />
@@ -70,7 +72,8 @@ const Body =() => {
     
         <div className="relist">
          {filteredList?.map((restaurant) => (
-                <ResCard resList={restaurant}/>
+              <Link to={"/restaurants/"+ restaurant.info.id}> 
+              <ResCard resList={restaurant}/> </Link>
             ))}
             </div>
         </div>

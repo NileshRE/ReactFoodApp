@@ -5,6 +5,8 @@
 <li> React Hooks </li>
 <li> State Variables </li>
 <li> Use Effect </li>  
+<li> Shimmer UI </li> 
+<li> React Routers </li> 
 </ol>
 
 <p> More updates soon....</p>

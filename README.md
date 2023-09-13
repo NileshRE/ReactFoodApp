@@ -1,23 +1,23 @@
 <h1> App made using React</h1>
 <h2> Concepts Covered</h2>
 <ol>
-<li><a href="/Parcel"> Parcel and JSX </a></li>
-<li><a href="/RFC">React Functional Components and Props</a> </li>
-<li><a href="/RH">React Hooks</a>  </li>
-<li><a href="/SV">State Variables</a>  </li>
-<li><a href="/RA">Reconciliation Algorithm</a> </li>
-<li><a href="/IE">Types of Import and export in React</a> </li>
-<li><a href="/UE">Use Effect </a> </li>  
-<li><a href="/SU">Shimmer UI</a>  </li> 
-<li><a href="/RCBC">React Class-Based Components</a>  </li> 
-<li><a href="/OC">Optional Chaining </a> </li> 
-<li><a href="/CORS">CORS</a>  </li> 
-<li><a href="/RR">React Routers</a> </li> 
-<li><a href="/API"> How React communicates </a> </li> 
-<li><a href="/MM">Monolith architecture and Microservices</a> </li> 
+<li>Parcel and JSX</li>
+<li>React Functional Components and Props</li>
+<li>React Hooks</li>
+<li>State Variables</li>
+<li>Reconciliation Algorithm</li>
+<li>Types of Import and export in React</li>
+<li>Use Effect</li>  
+<li>Shimmer UI</li> 
+<li>React Class-Based Components</li> 
+<li>Optional Chaining</li> 
+<li>CORS </li> 
+<li>React Routers</li> 
+<li>How React communicates</li> 
+<li>Monolith architecture and Microservices </li> 
 </ol>
 <br>
-<h2 id="Parcel"> Parcel </h2>
+<h2> Parcel </h2>
 <p>Parcel and Webpack are Bundlers. They bundle JS, CSS and HTML files into a bundle that is fast and optimized for production. Parcel is zero-config bundler while Webpack offers flexibility and is a complex bundler. Parcel requires no setup while webpack requires customization. Parcel is a multi-core designed bundlers which helps in parallel running of several tasks.</p>
 <br>
 <p> Uses of Parcel</p>
@@ -43,7 +43,7 @@
 <li>Element creation in JSX:  const abc = tag Heading tag</li>
 </ul>
 <br>
-<h2 id="RFC"> React Functional Components </h2>
+<h2> React Functional Components </h2>
 <ul>
 <li>Functional Component creation in JSX; const (first letter capital) Abc =()=> divtags</li>
 <li>Rendering component in root: root.render(<Component/>);</li>
@@ -60,19 +60,19 @@
 </ul>
 <br>
 
-<h2 id="RH">React Hooks </h2>
-<h2 id="SV">State Variables </h2>
-<h2 id="RA">Reconciliation Algorithm </h2>
-<h2 id="I/E">Types of Import and export in React </h2>
-<h2 id="UE">Use Effect </h2>
-<h2 id="SU">Shimmer UI  </h2>
-<h2 id="RCBC">React Class-Based Components </h2>
-<h2 id="LCM"> Life-Cycle Methods of Class-Based Components</h2>
-<h2 id="OC">Optional Chaining</h2>
-<h2 id="CORS"> CORS </h2>
-<h2 id="RR"> React Routers </h2>
-<h2 id="API"> How React communicates </h2>
-<h2 id="MM"> Monolith architecture and Microservices </h2>
+<h2>React Hooks </h2>
+<h2>State Variables </h2>
+<h2>Reconciliation Algorithm </h2>
+<h2>Types of Import and export in React </h2>
+<h2>Use Effect </h2>
+<h2>Shimmer UI  </h2>
+<h2>React Class-Based Components </h2>
+<h2> Life-Cycle Methods of Class-Based Components</h2>
+<h2>Optional Chaining</h2>
+<h2> CORS </h2>
+<h2> React Routers </h2>
+<h2> How React communicates </h2>
+<h2>Monolith architecture and Microservices </h2>
 
 
 <p> More updates soon....</p>

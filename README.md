@@ -62,10 +62,10 @@
 <br>
 <h2>React Hooks</h2>
 <ol>
-<li>Basically, Hooks are reusable components and functions starting with 'use' are called Hooks.<li> 
-<li>They are called at the top of components or another Hooks.<li> 
-<li>They are imported from React Library.<li>
-<li>They can't used with a condition<li>
+<li>Basically, Hooks are reusable components and functions starting with 'use' are called Hooks.</li> 
+<li>They are called at the top of components or another Hooks.</li> 
+<li>They are imported from React Library.</li>
+<li>They can't used with a condition</li>
 </ol>
 <p>useEffect, useState and useParams etc. are hooks imported from React to use it in another component.</p>
 <br>

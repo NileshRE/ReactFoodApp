@@ -60,17 +60,14 @@
 <li>Syntax: {props}</li>
 </ul>
 <br>
-
-<h2>React Hooks </h2>
-<br>
+<h2>React Hooks</h2>
 <ol>
 <li>Basically, Hooks are reusable components and functions starting with 'use' are called Hooks.<li> 
 <li>They are called at the top of components or another Hooks.<li> 
 <li>They are imported from React Library.<li>
 <li>They can't used with a condition<li>
-<br>
-<p>useEffect, useState and useParams etc. are hooks imported from React to use it in another component.</p>
 </ol>
+<p>useEffect, useState and useParams etc. are hooks imported from React to use it in another component.</p>
 <br>
 <h2>State Variables</h2>
 <p> State variables are super powerful variables provided by useState Hooks. With the help of state variables we can add dynamic data to our components. It is a normal JS utility function only.</p>

@@ -1,5 +1,5 @@
 import Item from "./Top_Items";
-import ResCard from "./ResCard";
+import ResCard, { withOffer } from "./ResCard";
 import {Top} from "../../src/Utils/constant";
 import { useEffect, useState } from "react";
 import Shimmer from "./shimmer";
@@ -16,6 +16,8 @@ const Body =() => {
 
     const[filteredList, setFilteredList] = useState([]);
 
+    const offerCard = withOffer(ResCard);
+    
     useEffect(() => {
       fetchData();
     }, []);
@@ -23,17 +25,14 @@ const Body =() => {
 
     const fetchData= async () => {
       const data = await fetch (
-        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6304203&lng=77.21772159999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.5478897&lng=77.2031247&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
       );
       
       const json = await data.json();
-      const rest= json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-      console.log(rest)
+      const rest= json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
 
       setResList(rest);
-      setFilteredList(rest);
-      
-       
+      setFilteredList(rest);    
     };
 
       
@@ -73,7 +72,7 @@ const Body =() => {
         <button className="px-4 py-1 border-2 border-slate-300 rounded-full text-black" 
         onClick={() => {
           const filteredList = resList.filter (
-            (res) => res.info.avgRating > 4.2 
+            (res) => res.info.avgRating > 4.3 
             );
             setFilteredList(filteredList);
             }}
@@ -84,12 +83,18 @@ const Body =() => {
     
         <div className=" inline lg:flex flex-wrap flex-row justify-start ml-4">
          {filteredList?.map((restaurant) =>(
-              <Link to={"/restaurants/"+ restaurant.info.id}> 
-              <ResCard resList={restaurant}/> </Link>
+              <Link to={"/restaurants/"+ restaurant.info.id}>
+                {setResList.isOpen
+                ? (<offerCard resList={restaurant}/>
+                ):(
+                <ResCard resList={restaurant}/>)
+                }  
+              </Link>
             ))}
-            </div>
+            </div> 
         </div>
+      
     );
 };
 
-export default Body
+export default Body;

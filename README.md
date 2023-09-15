@@ -15,7 +15,7 @@
 <li>CORS </li> 
 <li>React Routers</li> 
 <li>How React communicates</li>  
-<li>Custom Hooks, Lazy loading with Suspense tags and Tailwind CSS </li> 
+<li>Custom Hooks, Lazy loading with Suspense tags and Tailwind CSS</li> 
 </ol>
 <br>
 <h2> Parcel </h2>

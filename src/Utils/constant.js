@@ -48,6 +48,7 @@ export const Top=[
     imageId: "v1674029845/PC_Creative%20refresh/3D_bau/banners_new/Cakes.png",
 }
 ]
+export const RestroList_API = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6304203&lng=77.21772159999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 
-export const Menu_API="https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.5478897&lng=77.2031247&restaurantId=";
+export const Menu_API="https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.6304203&lng=77.21772159999999&restaurantId=";
 

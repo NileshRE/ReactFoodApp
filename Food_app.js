@@ -1,13 +1,14 @@
-import React from "react";
+import React, {lazy, Suspense} from "react";
 import ReactDOM from "react-dom/client";
-import Header from "./Components/Header";
-import Body from "./Components/Body";
+import Header from "./src/Components/Header";
+import Body from "./src/Components/Body";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import Help from "./Components/Help";
-import Offers from "./Components/Offers";
-import Error from "./Components/Error";
-import RestroMenu from "./Components/RestaurantMenu";
+import Offers from "./src/Components/Offers";
+import Error from "./src/Components/Error";
+import RestroMenu from "./src/Components/RestaurantMenu";
+import { lazy, Suspense } from "react";
 
+const Aboutus = lazy(()=> import("./src/Components/Aboutus.js"));
 
 const App =() => {
     return (
@@ -29,8 +30,12 @@ const approuter = createBrowserRouter([
             element:<Body/>
         },
     {
-        path:"/Help",
-        element:<Help/>,
+        path:"/Aboutus",
+        element: (
+        <Suspense fallback={<h1>Loading....</h1>}>
+            <Aboutus/>
+            </Suspense>
+            ),
     },
     {
         path:"/Offers",

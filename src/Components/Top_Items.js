@@ -1,5 +1,5 @@
-import { Top } from "../Utils/constant";
-import { CDN } from "../Utils/constant";
+import { Top } from "../../src/Utils/constant";
+import { CDN } from "../../src/Utils/constant";
 
 const Item = (props) => {
     const{Top} = props;
@@ -9,7 +9,7 @@ const Item = (props) => {
 
     return (
         <div>
-            <img className="foodItems" src={CDN + imageId}/>
+            <img className="w-36 " src={CDN + imageId}/>
         </div>
     );
 };

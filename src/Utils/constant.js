@@ -49,5 +49,5 @@ export const Top=[
 }
 ]
 
-export const Menu_API="https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.5478897&lng=77.2031247&restaurantId=";
+export const Menu_API="https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.5478897&lng=77.2031247&restaurantId=";
 

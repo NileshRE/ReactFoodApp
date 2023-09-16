@@ -81,7 +81,7 @@ const Body =() => {
 
 </div>
     
-        <div className=" inline lg:flex flex-wrap flex-row justify-start ml-4">
+        <div className=" inline md:flex flex-wrap flex-row justify-start ml-4">
          {filteredList?.map((restaurant) =>(
               <Link to={"/restaurants/"+ restaurant.info.id}>
                 {setResList.isOpen

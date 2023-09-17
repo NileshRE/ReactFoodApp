@@ -1,4 +1,4 @@
-import ItemList from "./itemList";
+import ItemList from "./Itemslst";
 
 const RestroCategory =({data})=>{
     return(

@@ -30,7 +30,7 @@ const Body =() => {
       
       const json = await data.json();
       const rest= json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-
+      console.log(resList)
       setResList(rest);
       setFilteredList(rest);    
     };

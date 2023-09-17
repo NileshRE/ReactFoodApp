@@ -1,4 +1,4 @@
-
+import RestroCategory from "./RestroCategory";
 import Shimmer from "./shimmer";
 import { CDN } from "../Utils/constant";
 import { useParams } from "react-router-dom";
@@ -19,22 +19,23 @@ const { name, cuisines, cloudinaryImageId }  = resInfo?.cards[0]?.card?.card?.in
 
 const {itemCards} = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
 
-const Categories = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card.filter((c)=>c?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.Dish"
+
+const Categories = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c)=>c?.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
 
 );
 
+
+
+
     return(
-        <div className="m-8">
+        <div className="m-8 text-center">
             <h1 className="text-2xl font-semibold">{name}</h1>
             <p>{cuisines.join(", ")}</p>
-            <img className= "w-64 my-4 rounded-md" src={CDN+cloudinaryImageId}/>
+            <img className= "w-80 my-4 rounded-md mx-[40%]" src={CDN+cloudinaryImageId}/>
             <h3 className="text-lg font-medium mb-4">Menu</h3>
-            <div className="">
-            <ul className="text-md">
-                {itemCards?.map((item)=>(<li key={item?.card?.info?.id}>{item?.card?.info?.name || item?.card?.card?.carousel[0]?.dish?.info?.name} - ₹{(item?.card?.info?.price)/100 || (item?.card?.info?.defaultPrice)/100 }</li> ))}
-            </ul>
-            
-            </div>
+                {Categories.map((category) => (
+                    <RestroCategory data ={category?.card?.card}/>
+                ))}
         </div>
     );
 };

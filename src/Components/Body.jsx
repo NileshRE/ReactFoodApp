@@ -105,6 +105,15 @@ const Body =() => {
             }}
             > Fast Food </button>
 
+<button className="px-4 py-1 mx-2 border-2 border-slate-300 rounded-full text-black hover:bg-orange-300" 
+        onClick={() => {
+          const filteredList = resList.filter (
+            (res) => res.info.cuisines.includes("Pizzas") 
+            );
+            setFilteredList(filteredList);
+            }}
+            >Pizzas </button>
+
             
 <button className="px-4 py-1 mx-2 border-2 border-slate-300 rounded-full text-black hover:bg-orange-300" 
         onClick={() => {

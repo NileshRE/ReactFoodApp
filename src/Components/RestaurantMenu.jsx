@@ -19,6 +19,10 @@ const { name, cuisines, cloudinaryImageId }  = resInfo?.cards[0]?.card?.card?.in
 
 const {itemCards} = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
 
+const Categories = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card.filter((c)=>c?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.Dish"
+
+);
+
     return(
         <div className="m-8">
             <h1 className="text-2xl font-semibold">{name}</h1>

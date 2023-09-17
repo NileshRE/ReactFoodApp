@@ -68,16 +68,70 @@ const Body =() => {
 
                     }}> Search </button>
                     
-
-        <button className="px-4 py-1 border-2 border-slate-300 rounded-full text-black" 
+        <button className="px-4 py-1 mx-2 border-2 border-slate-300 rounded-full text-black hover:bg-orange-200" 
         onClick={() => {
           const filteredList = resList.filter (
             (res) => res.info.avgRating > 4.3 
             );
             setFilteredList(filteredList);
             }}
-            >Top Rated Restaurant</button>
+            >Top Rated</button>
 
+<button className="px-4 py-1 mx-2 border-2 border-slate-300 rounded-full text-black hover:bg-orange-300" 
+        onClick={() => {
+          const filteredList = resList.filter (
+            (res) => res.info.cuisines.includes("Indian") 
+            );
+            setFilteredList(filteredList);
+            }}
+            > Indian </button>
+
+            
+<button className="px-4 py-1 mx-2 border-2 border-slate-300 rounded-full text-black hover:bg-orange-300" 
+        onClick={() => {
+          const filteredList = resList.filter (
+            (res) => res.info.cuisines.includes("South Indian") 
+            );
+            setFilteredList(filteredList);
+            }}
+            > South Indian </button>
+
+<button className="px-4 py-1 mx-2 border-2 border-slate-300 rounded-full text-black hover:bg-orange-300" 
+        onClick={() => {
+          const filteredList = resList.filter (
+            (res) => res.info.cuisines.includes("Fast Food") 
+            );
+            setFilteredList(filteredList);
+            }}
+            > Fast Food </button>
+
+            
+<button className="px-4 py-1 mx-2 border-2 border-slate-300 rounded-full text-black hover:bg-orange-300" 
+        onClick={() => {
+          const filteredList = resList.filter (
+            (res) => res.info.cuisines.includes("Beverages") 
+            );
+            setFilteredList(filteredList);
+            }}
+            > Beverages </button>
+
+<button className="px-4 py-1 mx-2 border-2 border-slate-300 rounded-full text-black hover:bg-orange-300" 
+        onClick={() => {
+          const filteredList = resList.filter (
+            (res) => res.info.cuisines.includes("Chinese") 
+            );
+            setFilteredList(filteredList);
+            }}
+            > Chinese </button>
+
+<button className="px-4 py-1 mx-2 border-2 border-slate-300 rounded-full text-black hover:bg-orange-300" 
+        onClick={() => {
+          const filteredList = resList.filter (
+            (res) => res.info.cuisines.includes("Biryani") 
+            );
+            setFilteredList(filteredList);
+            }}
+            > Biryani </button>
 
 </div>
     

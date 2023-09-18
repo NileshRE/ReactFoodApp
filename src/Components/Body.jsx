@@ -16,7 +16,7 @@ const Body =() => {
 
     const[filteredList, setFilteredList] = useState([]);
 
-    const offerCard = withOffer(ResCard);
+    const OfferCard = withOffer({ResCard});
     
     useEffect(() => {
       fetchData();
@@ -30,12 +30,11 @@ const Body =() => {
       
       const json = await data.json();
       const rest= json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-      console.log(resList)
+
       setResList(rest);
       setFilteredList(rest);    
     };
 
-      
       const onlineStatus = useOnlineStatus();
 
       if(onlineStatus===false) return (
@@ -148,7 +147,7 @@ const Body =() => {
          {filteredList?.map((restaurant) =>(
               <Link to={"/restaurants/"+ restaurant.info.id}>
                 {setResList.isOpen
-                ? (<offerCard resList={restaurant}/>
+                ? (<OfferCard resList={restaurant}/>
                 ):(
                 <ResCard resList={restaurant}/>)
                 }  

@@ -1,4 +1,5 @@
 import React from "react"
+import UserContext from "../Utils/UserContext";
 
 class Userclass extends React.Component {
  constructor(props){
@@ -34,6 +35,9 @@ this.setState({
         <p>Location: {id}</p>
         <p>Contact: @19nilesh.kumar</p>
         <button className="px-4 py-2 mr-8 my-4 border-2 border-orange-500 rounded-md text-black"> Contact</button>
+        <UserContext.Consumer>
+            {({loggedInUser})=><h1>{loggedInUser}</h1>}
+        </UserContext.Consumer>
     </div> 
         );
     };

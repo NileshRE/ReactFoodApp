@@ -6,7 +6,7 @@ import { star } from "../../src/Utils/constant";
 const ResCard = ({resList}) => {
 
     const {
-         name, cloudinaryImageId, avgRating, cuisines, areaName} = resList.info;
+         name, cloudinaryImageId, avgRating, cuisines, areaName} = resList?.info;
 
 
     return (
@@ -25,7 +25,7 @@ const ResCard = ({resList}) => {
      );
     };
 
-    export const withOffer =(ResCard)=>{
+    export const withOffer =({ResCard})=>{
         return(props)=>{
             return(
                 <div>

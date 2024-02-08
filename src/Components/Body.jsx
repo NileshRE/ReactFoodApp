@@ -25,11 +25,11 @@ const Body =() => {
 
     const fetchData= async () => {
       const data = await fetch (
-        "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.5478897&lng=77.2031247&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.5478897&lng=77.2031247&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
       );
       
       const json = await data.json();
-      const rest= json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+      const rest= json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
 
       setResList(rest);
       setFilteredList(rest);    
@@ -47,14 +47,14 @@ const Body =() => {
         <div className ="m-8">
         <h4 className="text-xl font-semibold mt-4"> What would you like to have!!</h4>
         <div className ="md:flex my-4 justify-between">
-            {Top.map((restaurant) => (
-                <Item Top={restaurant} />
+            {Top.map((restaurant,index) => (
+                <Item key={index} Top={restaurant} />
             ))}
         </div>
 
         <h4 className="text-xl font-semibold mt-4"> Restaurants near you </h4>
           <div className="search">
-        <input type="text" className="border-2 border-gray-400 mr-2 rounded-md h-8 p-3 bg-white-800" value={searchText}
+        <input type="text" data-testid="searchInput" className="border-2 border-gray-400 mr-2 rounded-md h-8 p-3 bg-white-800" value={searchText}
                     onChange={(e)=>{
                         setSearchText(e.target.value);
                     }}
@@ -145,7 +145,7 @@ const Body =() => {
     
         <div className=" inline md:flex flex-wrap flex-row justify-start ml-4">
          {filteredList?.map((restaurant) =>(
-              <Link to={"/restaurants/"+ restaurant.info.id}>
+              <Link key={restaurant.info.id} to={"/restaurants/"+ restaurant.info.id}>
                 {setResList.isOpen
                 ? (<OfferCard resList={restaurant}/>
                 ):(

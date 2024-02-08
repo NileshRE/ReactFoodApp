@@ -1,0 +1,194 @@
+
+{
+    "statusCode": 0,
+    "data": {
+      "statusMessage": "done successfully",
+      "cards": [
+        {
+          "card": {
+            "card": {
+              "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+              "info": {
+                "id": "12100",
+                "name": "Cafe Oakland",
+                "city": "Delhi",
+                "slugs": {
+                  "restaurant": "cafe-oakland-gtb-nagar",
+                  "city": "delhi"
+                },
+                "uniqueId": "e51e6528-4859-48c8-8fed-e84c17dc2d76",
+                "locality": "Hudson Lane",
+                "areaName": "GTB Nagar",
+                "costForTwo": "50000",
+                "costForTwoMessage": "₹500 for two",
+                "cuisines": [
+                  "North Indian",
+                  "Chinese"
+                ],
+                "veg": true,
+                "feeDetails": {
+                  "restaurantId": "12100",
+                  "fees": [
+                    {
+                      
+                    }
+                  ]
+                },
+                "parentId": "53817",
+                "avgRatingString": "--",
+                "totalRatingsString": "Too Few Ratings",
+                "sla": {
+                  "restaurantId": "12100",
+                  "serviceability": "NON_SERVICEABLE",
+                  "nonServiceableReason": "NON_SERVICEABLE_REASON_NON_BATCHABLE_ACTIVE_ORDER",
+                  "rainMode": "RAIN_MODE_NONE",
+                  "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                  "visibility": true,
+                  "restaurantClosedMeta": {
+                    
+                  }
+                },
+                "aggregatedDiscountInfo": {
+                  "visible": true
+                },
+                "badges": {
+                  
+                },
+                "slugString": "cafe-oakland-gtb-nagar",
+                "labels": [
+                  {
+                    "title": "Timings",
+                    "message": "null"
+                  },
+                  {
+                    "title": "Address",
+                    "message": "1st Floor,F-16 B, Opposite NDPL Office, Vijay Nagar, New Delhi 110009"
+                  },
+                  {
+                    "title": "Cuisines",
+                    "message": "North Indian,Chinese"
+                  }
+                ],
+                "aggregatedDiscountInfoV2": {
+                  "visible": true
+                },
+                "type": "F",
+                "headerBanner": {
+                  "url": "swiggy://webview?is_external=false&webview_url=https://www.swiggy.com/restaurant-info/12100"
+                },
+                "availabilityServiceabilityMessage": "Does not deliver to your location",
+                "orderabilityCommunication": {
+                  "title": {
+                    "text": "Wish you were"
+                  },
+                  "subTitle": {
+                    "text": "CLOSER!"
+                  },
+                  "message": {
+                    "text": "This location is outside the outlet's delivery area",
+                    "textColour": "negative"
+                  },
+                  "customIcon": {
+                    "bgGradientColorStart": "#F64C41",
+                    "bgGradientColorEnd": "#E53554"
+                  }
+                },
+                "cartOrderabilityNudgeBanner": {
+                  "parameters": {
+                    
+                  },
+                  "presentation": {
+                    
+                  }
+                },
+                "latLong": "28.6934557,77.2023263",
+                "externalRatings": {
+                  "aggregatedRating": {
+                    "rating": "--"
+                  }
+                },
+                "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+              },
+              "analytics": {
+                
+              }
+            },
+            "relevance": {
+              "type": "RELEVANCE_TYPE_CHECK_ORDERABILITY_ON_ITEM_ADD",
+              "sectionId": "POP_UP_CROUTON_MENU"
+            }
+          }
+        },
+        {
+          "groupedCard": {
+            "cardGroupMap": {
+              "REGULAR": {
+                "cards": [
+                  {
+                    "card": {
+                      "card": {
+                        "@type": "type.googleapis.com/swiggy.presentation.food.v2.MenuVegFilterAndBadge",
+                        "isPureVeg": true,
+                        "badges": {
+                          
+                        },
+                        "vegOnlyDetails": {
+                          "imageId": "AutoVegOnly_qkjowj",
+                          "title": "Showing only vegetarian options.",
+                          "description": "Tap on the VEG ONLY button to turn off the setting"
+                        },
+                        "topRatedFilter": {
+                          
+                        },
+                        "kidsCategoryFilter": {
+                          "attributes": {
+                            "displayText": "Kids Favourites",
+                            "tooltip": {
+                              "enabled": true,
+                              "displayText": "Kids Favourites Filter applied. Remove this filter to see the full Menu."
+                            }
+                          }
+                        },
+                        "vegFilter": {
+                          "attributes": {
+                            "displayText": "VEG"
+                          }
+                        },
+                        "nonvegFilter": {
+                          "attributes": {
+                            "displayText": "NONVEG"
+                          }
+                        }
+                      },
+                      "relevance": {
+                        "type": "RELEVANCE_TYPE_ON_MENU_FILTER_TOGGLED",
+                        "sectionId": "MENU_FILTER_TOGGLE"
+                      }
+                    }
+                  },
+                  {
+                    "card": {
+                      "card": {
+                        "@type": "type.googleapis.com/swiggy.presentation.food.v2.RestaurantAddress",
+                        "name": "Cafe Oakland",
+                        "area": "GTB Nagar",
+                        "completeAddress": "1st Floor,F-16 B, Opposite NDPL Office, Vijay Nagar, New Delhi 110009"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "firstOffsetRequest": true,
+      "isQCLink": false
+    },
+    "tid": "bbddf56e-b1f2-4141-af1b-2a64df3d3e2d",
+    "sid": "c22ced9f-d08a-47de-99c6-17950b34b906",
+    "deviceId": "581119ca-d5b5-8d57-f158-9201bd3f6598",
+    "csrfToken": "EHBPfJiR5FnI-gxqbWgharq3L0Lm0Mg8cts3QvqI"
+  }

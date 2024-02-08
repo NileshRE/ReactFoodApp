@@ -1,5 +1,4 @@
 import ItemList from "./Itemslst";
-import { useState } from "react";
 
 const RestroCategory =({data, showIndex, setShowIndex})=>{
 

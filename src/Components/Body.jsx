@@ -5,13 +5,13 @@ import { useEffect, useState } from "react";
 import Shimmer from "./shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../../src/Utils/useOnlineStatus";
-
+import { useTheme } from "../Utils/UserContext";
 
 
 const Body =() => {
-
+    
     const[resList, setResList] = useState([]);
-
+    const {theme} = useTheme();
     const [searchText, setSearchText] = useState(""); 
 
     const[filteredList, setFilteredList] = useState([]);
@@ -44,7 +44,7 @@ const Body =() => {
     return resList?.length===0 ? (
         <Shimmer/>
     ) : (
-        <div className ="m-8">
+        <div className ={`p-8 ${(theme==="light")?"bg-white":"bg-black text-white"}`}>
         <h4 className="text-xl font-semibold mt-4"> What would you like to have!!</h4>
         <div className ="md:flex my-4 justify-between">
             {Top.map((restaurant,index) => (
@@ -52,22 +52,24 @@ const Body =() => {
             ))}
         </div>
 
-        <h4 className="text-xl font-semibold mt-4"> Restaurants near you </h4>
+        <h4 className="text-xl font-semibold mt-4">Restaurants near you </h4>
           <div className="search">
         <input type="text" data-testid="searchInput" className="border-2 border-gray-400 mr-2 rounded-md h-8 p-3 bg-white-800" value={searchText}
                     onChange={(e)=>{
                         setSearchText(e.target.value);
                     }}
                     />
-                    <button className="px-4 py-2 mr-8 my-4 border-2 border-orange-500 rounded-md text-black" onClick={()=>{
+                    <button className={`btn
+${(theme==="light")?"text-black":"text-white"}`}  onClick={()=>{
                         const filteredRestaurant = resList.filter((res) =>
                         res.info.name.toLowerCase().includes(searchText.toLowerCase())
                         );
                         setFilteredList(filteredRestaurant);
 
-                    }}> Search </button>
+                    }}>Search</button>
                     
-        <button className="px-4 py-1 mx-2 border-2 border-slate-300 rounded-full text-black hover:bg-orange-200" 
+        <button className={`btn
+${(theme==="light")?"text-black":"text-white"}`} 
         onClick={() => {
           const filteredList = resList.filter (
             (res) => res.info.avgRating > 4.3 
@@ -76,7 +78,8 @@ const Body =() => {
             }}
             >Top Rated</button>
 
-<button className="px-4 py-1 mx-2 border-2 border-slate-300 rounded-full text-black hover:bg-orange-300" 
+<button className={`btn
+${(theme==="light")?"text-black":"text-white"}`} 
         onClick={() => {
           const filteredList = resList.filter (
             (res) => res.info.cuisines.includes("Indian") 
@@ -86,7 +89,8 @@ const Body =() => {
             > Indian </button>
 
             
-<button className="px-4 py-1 mx-2 border-2 border-slate-300 rounded-full text-black hover:bg-orange-300" 
+<button className={`btn
+${(theme==="light")?"text-black":"text-white"}`}  
         onClick={() => {
           const filteredList = resList.filter (
             (res) => res.info.cuisines.includes("South Indian") 
@@ -95,7 +99,8 @@ const Body =() => {
             }}
             > South Indian </button>
 
-<button className="px-4 py-1 mx-2 border-2 border-slate-300 rounded-full text-black hover:bg-orange-300" 
+<button className={`btn
+${(theme==="light")?"text-black":"text-white"}`}  
         onClick={() => {
           const filteredList = resList.filter (
             (res) => res.info.cuisines.includes("Fast Food") 
@@ -104,7 +109,8 @@ const Body =() => {
             }}
             > Fast Food </button>
 
-<button className="px-4 py-1 mx-2 border-2 border-slate-300 rounded-full text-black hover:bg-orange-300" 
+<button className={`btn
+${(theme==="light")?"text-black":"text-white"}`}  
         onClick={() => {
           const filteredList = resList.filter (
             (res) => res.info.cuisines.includes("Pizzas") 
@@ -114,7 +120,8 @@ const Body =() => {
             >Pizzas </button>
 
             
-<button className="px-4 py-1 mx-2 border-2 border-slate-300 rounded-full text-black hover:bg-orange-300" 
+<button className={`btn
+${(theme==="light")?"text-black":"text-white"}`}  
         onClick={() => {
           const filteredList = resList.filter (
             (res) => res.info.cuisines.includes("Beverages") 
@@ -123,7 +130,8 @@ const Body =() => {
             }}
             > Beverages </button>
 
-<button className="px-4 py-1 mx-2 border-2 border-slate-300 rounded-full text-black hover:bg-orange-300" 
+<button className={`btn
+${(theme==="light")?"text-black":"text-white"}`}  
         onClick={() => {
           const filteredList = resList.filter (
             (res) => res.info.cuisines.includes("Chinese") 
@@ -132,7 +140,8 @@ const Body =() => {
             }}
             > Chinese </button>
 
-<button className="px-4 py-1 mx-2 border-2 border-slate-300 rounded-full text-black hover:bg-orange-300" 
+<button className={`btn
+${(theme==="light")?"text-black":"text-white"}`}  
         onClick={() => {
           const filteredList = resList.filter (
             (res) => res.info.cuisines.includes("Biryani") 

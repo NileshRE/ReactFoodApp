@@ -9,7 +9,7 @@ const Item = (props) => {
 
     return (
         <div>
-            <img className="w-36 " src={CDN + imageId}/>
+            <img className="w-36 rounded-md" src={CDN + imageId}/>
         </div>
     );
 };

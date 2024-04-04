@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { UserContextProvider, useName } from "../Utils/UserContext";
 
-const User = ({name, location}) => {
-
+const User = ({location}) => {
+const {name} = useName();
     const [ count2] = useState(0);
 
     return (
